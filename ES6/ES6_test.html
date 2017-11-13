@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		class Person{
+			// 类的构造函数
+			constructor(name){
+				this.name = name;
+				console.log(`this person'name is ${this.name}`);
+			}
+			// 类的函数
+			sayHello(){
+				console.log('hello world');
+			}
+
+			// this默认是指向类的实例的，但是单独使用的话，this 是指向这个函数所在的运行环境
+			// 解决方法1：在构造函数中绑定这个函数 this.printName = this.printName.bind(this)
+			// 解决方法2：箭头函数中的 this默认是绑定了
+			printName(){
+				this.print(`this name is ${this.name}`);
+			}
+
+			print(text){
+				console.log(text);
+			}
+
+			var log = (text) => {
+				console.log(text); 
+				return;
+			};
+		}
+
+		class Employee extends Person{
+			constructor(name){
+				super(name);
+				console.log(`this Employee'name is ${name}`);
+			}
+		}
+
+		var person = new Person('bob');
+		person.sayHello();
+		person.printName();
+		person.log('好使不');
+
+		var emp = new Employee('emplot');
+		emp.sayHello();
+		emp.printName();
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
