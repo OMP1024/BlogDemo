@@ -13,6 +13,8 @@
 		2DA1863B1F99EB66003B7F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1863A1F99EB66003B7F19 /* Assets.xcassets */; };
 		2DA1863E1F99EB66003B7F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1863C1F99EB66003B7F19 /* LaunchScreen.storyboard */; };
 		2DA186411F99EB66003B7F19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA186401F99EB66003B7F19 /* main.m */; };
+		2DC1749F1FF0A1FD000DDE70 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC1749C1FF0A1FD000DDE70 /* ADViewController.m */; };
+		2DC174A01FF0A1FD000DDE70 /* ADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC1749D1FF0A1FD000DDE70 /* ADViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		2DA1863D1F99EB66003B7F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DA1863F1F99EB66003B7F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DA186401F99EB66003B7F19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2DC1749C1FF0A1FD000DDE70 /* ADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADViewController.m; sourceTree = "<group>"; };
+		2DC1749D1FF0A1FD000DDE70 /* ADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADViewController.xib; sourceTree = "<group>"; };
+		2DC1749E1FF0A1FD000DDE70 /* ADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,9 @@
 			children = (
 				2DA186311F99EB65003B7F19 /* AppDelegate.h */,
 				2DA186321F99EB65003B7F19 /* AppDelegate.m */,
+				2DC1749E1FF0A1FD000DDE70 /* ADViewController.h */,
+				2DC1749C1FF0A1FD000DDE70 /* ADViewController.m */,
+				2DC1749D1FF0A1FD000DDE70 /* ADViewController.xib */,
 				2DA186341F99EB65003B7F19 /* ViewController.h */,
 				2DA186351F99EB66003B7F19 /* ViewController.m */,
 				2DA186371F99EB66003B7F19 /* Main.storyboard */,
@@ -130,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DA1863E1F99EB66003B7F19 /* LaunchScreen.storyboard in Resources */,
+				2DC174A01FF0A1FD000DDE70 /* ADViewController.xib in Resources */,
 				2DA1863B1F99EB66003B7F19 /* Assets.xcassets in Resources */,
 				2DA186391F99EB66003B7F19 /* Main.storyboard in Resources */,
 			);
@@ -143,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DA186361F99EB66003B7F19 /* ViewController.m in Sources */,
+				2DC1749F1FF0A1FD000DDE70 /* ADViewController.m in Sources */,
 				2DA186411F99EB66003B7F19 /* main.m in Sources */,
 				2DA186331F99EB65003B7F19 /* AppDelegate.m in Sources */,
 			);
@@ -281,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74EBQPNV7H;
 				INFOPLIST_FILE = tool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newsinpalm.tool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 74EBQPNV7H;
 				INFOPLIST_FILE = tool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newsinpalm.tool;
 				PRODUCT_NAME = "$(TARGET_NAME)";

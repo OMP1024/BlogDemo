@@ -76,12 +76,40 @@ var greet = (greeting,name) => `${greeting} ${name}`;
 带大括号的要有 return 返回。
 
 
-四、顶层变量
+四、函数扩展
+//ES6:
+function log(x, y = 'World') {
+  console.log(x, y);
+}
+
+//参数默认值和解构赋值配合使用：
+function foo({x, y = 5}) {
+  console.log(x, y);
+}
+foo({}) // undefined, 5
+foo({x: 1}) // 1, 5
+foo({x: 1, y: 2}) // 1, 2
+
+新增rest参数来获取函数的多余参数，这样就不需要用arguments对象。rest参数搭配一个数组就是，多余的参数会放入数组中:
+function add(...values) {
+   let sum = 0;
+   for (var val of values) {
+      sum += val;
+   }
+   return sum;
+}
+
+add(2, 5, 3) // 10
+rest参数注意点：
+
+
+
+五、顶层变量
 顶层变量：浏览器中是指 window，Node 中是指 global.
 ES6中 var function声明的全局变量默认也是顶层变量的属性。
 
 
-五、解构赋值
+六、解构赋值
 1、数组解构赋值
 let [a,b,c] = [1,2,3];
 
@@ -103,14 +131,15 @@ baz // "aaa"
 可以利用这个特性，从函数中返回多个值，然后进行对象的解析。
 
 
-六、for of 
+七、for of 
 var array = [12,3,45,5,6]
 for(let index of array){
 	if (index === 45) {break;}
 	console.log(index)
 }
 
-七、类
+
+八、类
 class Person{
 	// 类的构造函数
 	constructor(name){
@@ -134,7 +163,8 @@ class Person{
 	}
 }
 
-八、Symbol 是一种新的原始数据类型
+
+九、Symbol 是一种新的原始数据类型
 Symbol 可以用来创建一个应用程序中独一无二的字符串。保证与应用的其他变量，属性冲突。
 
 const COLOR_RED = Symbol(); 
